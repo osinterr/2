@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
-#include "file1.h"
 
-#define SIZE 104857600
+#include "file.h"
 
-static unsigned long arr[SIZE] = {0};
+#define SIZE 100
+
+static int arr[SIZE] = {0};
 
 void amount_different(char *sstr){
     int current = 1;
-    for(int i = 0; i < sizeof(sstr); ++i){
+    for(unsigned int i = 0; i < strlen(sstr); ++i){
         if(sstr[i] == sstr[i+1])
             current++;
         else{
@@ -35,8 +37,8 @@ int maxinmum_lenth(){
 
 char find_symbol(char* sstr, int lenth){
     int current = 1;
-    char symb;
-    for(int i = 0; i < sizeof(sstr); ++i){
+    char symb = ' ';
+    for(unsigned int i = 0; i < strlen(sstr); ++i){
         if(sstr[i] == sstr[i+1])
             current++;
         else{
@@ -51,7 +53,10 @@ char find_symbol(char* sstr, int lenth){
 }
 
 
-void print_ans(char symb, int lenth){
+char* print_ans(char symb, int lenth){
+    char* ans = (char*)malloc((lenth+1)*sizeof(char));
     for(int i = 0; i < lenth; ++i)
-        printf("%c", symb);
+        ans[i] = symb;
+    ans[lenth] = '\0';
+    return ans;
 }
