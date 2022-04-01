@@ -1,0 +1,5 @@
+/home/pihtaw/Documents/programming/tp2/hw_task2/built/CMakeFiles/main.dir
+/home/pihtaw/Documents/programming/tp2/hw_task2/built/CMakeFiles/tests.dir
+/home/pihtaw/Documents/programming/tp2/hw_task2/built/CMakeFiles/test.dir
+/home/pihtaw/Documents/programming/tp2/hw_task2/built/CMakeFiles/edit_cache.dir
+/home/pihtaw/Documents/programming/tp2/hw_task2/built/CMakeFiles/rebuild_cache.dir
